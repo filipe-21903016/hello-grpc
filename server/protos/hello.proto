@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package hello;
+
+message NewProductRequest {
+    string name = 1;
+    int32 price = 2;
+}
+
+message NewProductResponse {
+    bool success = 1;
+}
+
+service ProductService {
+    rpc NewProduct(NewProductRequest) returns (NewProductResponse) {}
+}
